@@ -1,0 +1,37 @@
+﻿@model MobileShope.Models.Category
+
+@{
+    ViewData["Title"] = "CategoryDetail";
+}
+
+<h2>CategoryDetail</h2>
+<div>
+    <h4>Category</h4>
+    <hr />
+    <dl class="dl-horizontal" id="table">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+    </dl>
+
+    
+    @Html.ActionLink("Edit", "CategoryEdit", new { CategoryId = Model.CategoryId }, new { @class = "btn btn-success" }) |
+    <a asp-action="CategoryList" class="btn btn-sm btn-success">Back to List</a>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+        add_chatinline();</script>
+    
+}
+

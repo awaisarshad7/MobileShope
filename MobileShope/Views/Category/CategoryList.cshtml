@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MobileShope.Models.Category>
+
+@{
+    ViewData["Title"] = "CategoryList";
+}
+
+<h2>CategoryList</h2>
+
+<p>
+    <a asp-action="AddCategory" class="btn btn-sm btn-success">Create New</a>
+</p>
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "CategoryEdit", new { CategoryID = item.CategoryId } , new { @class="btn btn-success" }) |
+                    @Html.ActionLink("Detail", "CategoryDetail", new { CategoryID = item.CategoryId }) |
+                    @Html.ActionLink("Delete", "CategoryDelete", new { CategoryID = item.CategoryId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+        add_chatinline();</script>
+    <script>
+        $(document).ready(function () {
+            $('#table').DataTable();
+
+        });
+
+    </script>
+}

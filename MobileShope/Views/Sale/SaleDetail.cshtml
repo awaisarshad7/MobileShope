@@ -1,0 +1,61 @@
+﻿@model MobileShope.Models.Sale
+
+@{
+    ViewData["Title"] = "SaleDetail";
+}
+
+<h2>SaleDetail</h2>
+
+<div>
+    <h4>Sale</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ItemId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerUnit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PricePerUnit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "SaleEdit", new { SaleID = Model.Id }) |
+    <a asp-action="SaleList">Back to List</a>
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript">
+        function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+        add_chatinline();</script>
+}

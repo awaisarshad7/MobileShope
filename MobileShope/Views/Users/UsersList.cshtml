@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MobileShope.Models.UserRegistration>
+
+@{
+    ViewData["Title"] = "UsersList";
+}
+
+<h2>UsersList</h2>
+
+<p>
+    <a asp-action="AddUsers">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Roll)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Roll)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "UserEdit", new { UserID = item.UserId }) |
+                    @Html.ActionLink("Details", "UsersDetail", new { UserID = item.UserId }) |
+                    @Html.ActionLink("Delete", "UserDelete", new { UserID = item.UserId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+  
+    <script type="text/javascript">
+function add_chatinline(){var hccid=69060714;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
+add_chatinline(); </script>
+}

@@ -1,0 +1,81 @@
+﻿@model MobileShope.Models.Items
+
+@{
+    ViewData["Title"] = "ItemsDetail";
+}
+
+<h2>ItemsDetail</h2>
+
+<div>
+    <h4>Items</h4>
+    <hr />
+       <dl class="dl-horizontal" id="table">
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ItemsId)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ItemsId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.CategoryId)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd>
+                @*@Html.DisplayFor(model => model.Image)*@
+                <img src="@Url.Content(Model.Image)" alt="Image" height="300" width="300" />
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ModelN0)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ModelN0)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Color)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Color)
+            </dd>
+        </>
+</div>
+<div>
+    @Html.ActionLink("Edit", "ItemEdit", new {  ItemID = Model.ItemsId  }) |
+    <a asp-action="ItemsList">Back to List</a>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+        </script>
+}

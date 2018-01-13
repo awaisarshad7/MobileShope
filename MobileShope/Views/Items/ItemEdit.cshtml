@@ -1,0 +1,85 @@
+﻿@model MobileShope.Models.Items
+
+@{
+    ViewData["Title"] = "ItemEdit";
+
+    IList<Items> ilist = ViewBag.item;
+
+    IList<Category> ct = ViewBag.category;
+}
+
+
+<h2>ItemEdit</h2>
+
+<h4>Items</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ItemEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ItemsId" class="control-label"></label>
+                <input asp-for="ItemsId" type="hidden" class="form-control" />
+                @*<select asp-for="ItemsId" asp-items="@ViewBag.ItemId" class="form-control"></select>*@
+                @*@Html.DropDownListFor(model => model.ItemsId, new SelectList(ilist, "ItemsId" , "Name") , "---Edit Item---" , new { @class="form-control" })*@
+                <span asp-validation-for="ItemsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                @*<input asp-for="CategoryId" class="form-control" />*@
+                @Html.DropDownListFor(model => model.CategoryId, new SelectList(ct,"CategoryId" , "CategoryName"), "---Edit Category---" , new { @class="form-control" })
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantity" class="control-label"></label>
+                <input asp-for="Quantity" class="form-control" />
+                <span asp-validation-for="Quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelN0" class="control-label"></label>
+                <input asp-for="ModelN0" class="form-control" />
+                <span asp-validation-for="ModelN0" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ItemsList">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script type="text/javascript">
+        function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+        add_chatinline();</script>
+}

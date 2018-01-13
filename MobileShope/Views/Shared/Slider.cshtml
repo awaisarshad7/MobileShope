@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MobileShope</title>
+    <link href="~/lib/Slider.css" rel="stylesheet" />
+    <environment include="Development">
+        <link href="~/font-awesome.min.css" rel="stylesheet" />
+        <link href="~/AboutUs.css" rel="stylesheet" />
+        <link href="~/ContactUs.css" rel="stylesheet" />
+        <link href="~/foter.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/lib/DataTable/jquery.dataTables.min.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    
+</head>
+<body>
+    @* ---Nav Bar Start--- *@
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Slider" asp-action="Slider" class="navbar-brand">Home</a>
+            </div>
+            <div class="navbar-collapse collapse col-md-4">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @* ---Nave Bar Close--- *@
+    <div class="clearfix"></div>
+    @* ---Slider Start---- *@
+    <div id="themeSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#themeSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#themeSlider" data-slide-to="1"></li>
+            <li data-target="#themeSlider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="imgOverlay"></div>
+                <img src="~/SliderImage/11.jpg" alt="First slide">
+            </div>
+            <div class="item">
+                <div class="imgOverlay"></div>
+                <img src="~/SliderImage/12.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <div class="imgOverlay"></div>
+                <img src="~/SliderImage/PC_Left_new.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="left carousel-control" href="#themeSlider" data-slide="prev">
+            <span class="fa fa-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#themeSlider" data-slide="next">
+            <span class="fa fa-chevron-right"></span>
+        </a>
+        <div class="main-text hidden-xs hidden-sm">
+            <div class="col-md-12 text-center">
+                <h1>To Be Happy In This World , <p>first you need a cell phone and then you need a airplane.</p></h1>
+                <h3>Then you're truly wireless.</h3>
+                <div class="clearfix"></div>
+                <div class="carousel-btns">
+                    <a class="btn btn-md btn-default" href="/Users/NewLogin">Login</a>
+                    @*<a class="btn btn-md btn-default" href="/Users/AddUsers">Registration</a>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    @* ---Slider Close--- *@
+    <div class="clearfix"></div>
+    @*--- About Us Start--- *@<br /><hr /><br />
+    <div class="about-section paddingTB60  well">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-6">
+                    <div class="about-title clearfix">
+                        <h1>About <span>Appmom</span></h1>
+                        <h3>Lorem ipsum dolor sit amet </h3>
+                        <p class="about-paddingB">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget venenatis mauris finibus dictum. Vestibulum quis elit eget neque porttitor congue non sit amet dolor. Proin pretium purus a lorem ornare </p>
+                        <p>sed lobortis pulvinar. Integer laoreet mi id eros porta euismod. Suspendisse potenti. Nulla eros mauris, convallis et sem tempus, viverra hendrerit sapien</p>
+                        <div class="about-icons">
+                            <ul>
+                                <li><a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a> </li>
+                                <li><a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a> </li>
+                                <li> <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a> </li>
+                                <li> <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-6">
+                    <div class="about-img">
+                        <img src="~/images/2.png" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*--- About US End--- *@
+    @* ---Start ConTact Us--- *@
+    <div class="container animated fadeIn">
+        <div class="row">
+            <h1 class="header-title"> Contact </h1>
+            <hr>
+            <div class="col-sm-12" id="parent">
+                <div class="col-sm-6">
+                    <iframe width="100%" height="320px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJaY32Qm3KWTkRuOnKfoIVZws&key=AIzaSyAf64FepFyUGZd3WFWhZzisswVx2K37RFY" allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-6">
+                    <form action="form.php" class="contact-form" method="post">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="">
+                        </div>
+
+
+                        <div class="form-group form_left">
+                            <input type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required="">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control textarea-contact" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
+                            <br>
+                            <button class="btn btn-default btn-send"> <span class="glyphicon glyphicon-send"></span> Send </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container second-portion">
+            <div class="row">
+                <!-- Boxes de Acoes -->
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <div class="image"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <div class="info">
+                                <h3 class="title">MAIL & WEBSITE</h3>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp infomobileshop@gmail.com
+                                    <br>
+                                    <br>
+                                    <i class="fa fa-globe" aria-hidden="true"></i> &nbsp www.infomobileshop@hotmail.com
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <div class="image"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                            <div class="info">
+                                <h3 class="title">CONTACT</h3>
+                                <p>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp (+92)-332XXXXX
+                                    <br>
+                                    <br>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp  (+92)-332XXXXX
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <div class="image"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                            <div class="info">
+                                <h3 class="title">ADDRESS</h3>
+                                <p>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp 15/3 Junction Plot
+                                    "Shree Krishna Krupa", Rajkot - 360001.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <!-- /Boxes de Acoes -->
+                <!--My Portfolio  dont Copy this -->
+
+            </div>
+        </div>
+    </div>
+    @* ---End Contact Us---- *@
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+                <div class="search-text">
+                    <div class="container">
+                        <div class="row text-center">
+
+                            <div class="form">
+                                <h4>SIGN UP TO OUR NEWSLETTER</h4>
+                                <form id="search-form" class="form-search form-horizontal">
+                                    <input type="text" class="input-search" placeholder="Email Address">
+                                    <button type="submit" class="btn-search">SUBMIT</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                            <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                            <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                            <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                            <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                            <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                            <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="border-top:1px solid grey;">
+                    <div class="row text-center">
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <ul class="menu">
+
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">About</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Gallery</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+
+
+            <div class="copyright">
+                <div class="container">
+
+                    <div class="row text-center">
+                        <p>Copyright © 2017 All rights reserved</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+       
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/DataTable/jquery.dataTables.min.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model MobileShope.Models.Vendor
+
+@{
+    ViewData["Title"] = "VendorDetail";
+}
+
+<h2>VendorDetail</h2>
+
+<div>
+    <h4>Vendor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VendorId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VendorId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VandorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VandorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCardNo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCardNo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "VendorEdit", new { VendorID = Model.VendorId }) |
+    <a asp-action="VendorList">Back to List</a>
+</div>
+
+@section Scripts {
+       <script type="text/javascript">
+        function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
+        add_chatinline();</script>
+
+
+}
+
