@@ -9,6 +9,8 @@
 <p>
     <a asp-action="AddCustomer">Create New</a>
 </p>
+<div id="Count" class="badge">
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -51,4 +53,10 @@
     <script type="text/javascript">
         function add_chatinline() { var hccid = 69060714; var nt = document.createElement("script"); nt.async = true; nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid; var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct); }
         add_chatinline();</script>
+    <script>
+        $(document).ready(function () {
+            $('#Count').load('/DashBoard/CountCustomers');
+
+        });
+    </script>
 }

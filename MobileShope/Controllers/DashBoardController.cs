@@ -47,13 +47,13 @@ namespace MobileShope.Controllers
         {
             return OurDbContext.UserRegistration.ToList<UserRegistration>().Count;
         }
-        public IActionResult Slider()
-        {
-            return View();
-        }
-       public IActionResult AwaisSlider()
-        {
-            return View();
-        }
+       // public IActionResult Slider()
+       // {
+       //     return View();
+       // }
+       //public IActionResult AwaisSlider()
+       // {
+       //     return View();
+       // }
     }
 }

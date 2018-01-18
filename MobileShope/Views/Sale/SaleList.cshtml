@@ -7,7 +7,7 @@
 <h2>SaleList</h2>
 
 <p>
-    <a asp-action="AddSale">Create New</a>
+    <a asp-action="AddSale" class="btn btn-primary">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -56,9 +56,9 @@
                     @Html.DisplayFor(modelItem => item.TotalPrice)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "SaleEdit", new { SaleID = item.Id }) |
-                    @Html.ActionLink("Details", "SaleDetail", new { SaleID = item.Id }) |
-                    @Html.ActionLink("Delete", "SaleDelete", new { SaleID = item.Id })
+                    @Html.ActionLink("Edit", "SaleEdit", new { SaleID = item.Id }, new { @class="btn btn-success" }) |
+                    @Html.ActionLink("Details", "SaleDetail", new { SaleID = item.Id }, new { @class = "btn btn-sm btn-primary" }) |
+                    @Html.ActionLink("Delete", "SaleDelete", new { SaleID = item.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

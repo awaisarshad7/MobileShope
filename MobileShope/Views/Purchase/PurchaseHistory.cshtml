@@ -8,7 +8,7 @@
 <h2>PurchaseHistory</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
 <table class="table" id="table">
     <thead>
@@ -63,9 +63,9 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ } , new { @class="btn btn-success" }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ } ,  new{ @class="btn btn-sm btn-primary" }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class="btn btn-danger" })
                 </td>
             </tr>
         }

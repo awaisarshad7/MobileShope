@@ -7,7 +7,7 @@
 <h2>PurchaseList</h2>
 
 <p>
-    <a asp-action="AddPurchase" class="btn btn-success">Create New</a>
+    <a asp-action="AddPurchase" class="btn btn-primary">Create New</a>
 </p>
 <table class="table" id="table">
     <thead>
@@ -62,9 +62,9 @@
                     @Html.DisplayFor(modelItem => item.Date)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "PurchaseEdit", new { PurchaseID = item.Id }) |
-                    @Html.ActionLink("Details", "PurchaseDetail", new { PurchaseID = item.Id }) |
-                    @Html.ActionLink("Delete", "PurchaseDelete", new { PurchaseID = item.Id })
+                    @Html.ActionLink("Edit", "PurchaseEdit", new { PurchaseID = item.Id } , new { @class="btn btn-success"}) |
+                    @Html.ActionLink("Details", "PurchaseDetail", new { PurchaseID = item.Id }, new { @class = "btn bt-sm btn-primary" }) |
+                    @Html.ActionLink("Delete", "PurchaseDelete", new { PurchaseID = item.Id }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

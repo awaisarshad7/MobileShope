@@ -5,10 +5,11 @@
 }
 
 <h2>CategoryList</h2>
-
 <p>
-    <a asp-action="AddCategory" class="btn btn-sm btn-success">Create New</a>
+    <a asp-action="AddCategory" class="btn btn-sm btn-primary">Create New</a>
 </p>
+<div id="Count" class="badge">
+</div>
 <table class="table" id="table">
     <thead>
         <tr>
@@ -33,13 +34,14 @@
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "CategoryEdit", new { CategoryID = item.CategoryId } , new { @class="btn btn-success" }) |
-                    @Html.ActionLink("Detail", "CategoryDetail", new { CategoryID = item.CategoryId }) |
-                    @Html.ActionLink("Delete", "CategoryDelete", new { CategoryID = item.CategoryId })
+                    @Html.ActionLink("Detail", "CategoryDetail", new { CategoryID = item.CategoryId }, new { @class = "btn btn-small btn-primary " }) |
+                    @Html.ActionLink("Delete", "CategoryDelete", new { CategoryID = item.CategoryId }, new { @class = "btn btn-small  btn-danger" })
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<div class="btn btn btn-primary">DashBoard</div>
 
 
 @section Scripts {
@@ -51,6 +53,11 @@
             $('#table').DataTable();
 
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#Count').load('/DashBoard/CountCategory');
 
+        });
     </script>
 }

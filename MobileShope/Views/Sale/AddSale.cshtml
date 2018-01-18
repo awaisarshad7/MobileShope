@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "AddSale";
 
-    IList<Items> ititem = ViewBag.item;
+   
 }
 
 <h2>AddSale</h2>
@@ -16,8 +16,8 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ItemId" class="control-label"></label>
-                @*<input asp-for="ItemId" class="form-control" />*@
-                @Html.DropDownListFor(model => model.ItemId, new SelectList(ititem, "ItemsId", "Name"), "---Select Item Id---" , new { @class = "form-control" })
+                <input asp-for="ItemId" class="form-control" />
+                
                 <span asp-validation-for="ItemId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -41,14 +41,14 @@
                 <span asp-validation-for="TotalPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-success" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="SaleList">Back to List</a>
+    <a asp-action="SaleList" class="btn btn-primary">Back to List</a>
 </div>
 
 @section Scripts {
