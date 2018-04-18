@@ -8,11 +8,32 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-
-    <link href="~/NewLogin.css" rel="stylesheet" type="text/css" />
+    <link href="~/LoginForm/style.css" rel="stylesheet" />
     <title>NewLogin</title>
 </head>
-<body>
+
+
+<body class="body">
+    <div class="login-box embed-responsive">
+        <div class="design">
+            Log in <b>your Account</b>
+        </div>
+        <form class="form form-group embed-responsive" action="/Users/checkloginusingform">
+            <div class="center">
+                <label class="text">User Name</label>
+                <input type="text" class="text1" value="" required="required" name="user name" />
+                <br /> <br />
+                <label class="text">Password</label>
+                <input type="text" class="text2" typeof="password" value="" required="required" name="password" />
+                <input class="button" type="submit" value="login" />
+                <input class="button1" type="submit" value="Sign up" readonly="" />
+            </div>
+            </form>
+    </div>
+</body>
+
+
+@*<body>
     <div class="login-box embed-responsive">
         <img src="~/SliderImage/11.jpg" class="Myglipicon responsive img-responsive" />
             <h1>Login Here</h1>
@@ -26,5 +47,7 @@
                         <a href="#">Forget Your Password</a>
                 </form>
     </div>
-</body>
+</body>*@
+
+
 </html>

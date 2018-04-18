@@ -6,24 +6,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\HTML\**" />
+    <Content Remove="wwwroot\HTML\**" />
+    <EmbeddedResource Remove="wwwroot\HTML\**" />
+    <None Remove="wwwroot\HTML\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Views\DashBoard\AwaisSlider.cshtml" />
     <Content Remove="Views\Shared\_LayoutSlider.cshtml" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.0.1" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="2.1.0-preview2-final" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0-preview2-final" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.0-preview2-final" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview2-final" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,51 +40,32 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\HTML\.DS_Store" />
-    <None Include="wwwroot\HTML\css\.DS_Store" />
-    <None Include="wwwroot\HTML\css\plugin\.DS_Store" />
-    <None Include="wwwroot\HTML\css\plugin\bootstrap-toggle\.DS_Store" />
-    <None Include="wwwroot\HTML\css\style.less" />
-    <None Include="wwwroot\HTML\fonts\.DS_Store" />
-    <None Include="wwwroot\HTML\fonts\fontawesome-webfont.svg" />
-    <None Include="wwwroot\HTML\fonts\fontawesome-webfont.woff2" />
-    <None Include="wwwroot\HTML\img\.DS_Store" />
-    <None Include="wwwroot\HTML\img\alerticons\.DS_Store" />
-    <None Include="wwwroot\HTML\img\datatables\.DS_Store" />
-    <None Include="wwwroot\HTML\img\modalicons\.DS_Store" />
-    <None Include="wwwroot\HTML\js\.DS_Store" />
-    <None Include="wwwroot\HTML\js\bootstrap-select\bootstrap-select.js" />
-    <None Include="wwwroot\HTML\js\bootstrap-toggle\bootstrap-toggle.min.js" />
-    <None Include="wwwroot\HTML\js\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
-    <None Include="wwwroot\HTML\js\bootstrap-wysihtml5\wysihtml5-0.3.0.min.js" />
-    <None Include="wwwroot\HTML\js\bootstrap\bootstrap.min.js" />
-    <None Include="wwwroot\HTML\js\chartist\.DS_Store" />
-    <None Include="wwwroot\HTML\js\chartist\chartist-plugin.js" />
-    <None Include="wwwroot\HTML\js\chartist\chartist.js" />
-    <None Include="wwwroot\HTML\js\datatables\datatables.min.js" />
-    <None Include="wwwroot\HTML\js\date-range-picker\daterangepicker.js" />
-    <None Include="wwwroot\HTML\js\easypiechart\easypiechart-plugin.js" />
-    <None Include="wwwroot\HTML\js\easypiechart\easypiechart.js" />
-    <None Include="wwwroot\HTML\js\flot-chart\flot-chart-pie.js" />
-    <None Include="wwwroot\HTML\js\flot-chart\flot-chart-plugin.js" />
-    <None Include="wwwroot\HTML\js\flot-chart\flot-chart-stack.js" />
-    <None Include="wwwroot\HTML\js\flot-chart\flot-chart-time.js" />
-    <None Include="wwwroot\HTML\js\flot-chart\flot-chart.js" />
-    <None Include="wwwroot\HTML\js\full-calendar\fullcalendar.js" />
-    <None Include="wwwroot\HTML\js\gmaps\gmaps-plugin.js" />
-    <None Include="wwwroot\HTML\js\gmaps\gmaps.js" />
-    <None Include="wwwroot\HTML\js\jquery-ui\jquery-ui.min.js" />
-    <None Include="wwwroot\HTML\js\jquery.min.js" />
-    <None Include="wwwroot\HTML\js\kode-alert\main.js" />
-    <None Include="wwwroot\HTML\js\moment\moment.min.js" />
-    <None Include="wwwroot\HTML\js\plugins.js" />
-    <None Include="wwwroot\HTML\js\rickshaw\d3.v3.js" />
-    <None Include="wwwroot\HTML\js\rickshaw\rickshaw-plugin.js" />
-    <None Include="wwwroot\HTML\js\rickshaw\rickshaw.js" />
-    <None Include="wwwroot\HTML\js\sparkline\sparkline-plugin.js" />
-    <None Include="wwwroot\HTML\js\sparkline\sparkline.js" />
-    <None Include="wwwroot\HTML\js\summernote\summernote.min.js" />
-    <None Include="wwwroot\HTML\js\sweet-alert\sweet-alert.min.js" />
+    <None Include="wwwroot\DashBoard\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\DashBoard\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\DashBoard\js\bootstrap.js" />
+    <None Include="wwwroot\DashBoard\js\Chart.js" />
+    <None Include="wwwroot\DashBoard\js\classie.js" />
+    <None Include="wwwroot\DashBoard\js\clndr.js" />
+    <None Include="wwwroot\DashBoard\js\custom.js" />
+    <None Include="wwwroot\DashBoard\js\jquery-1.11.1.min.js" />
+    <None Include="wwwroot\DashBoard\js\jquery.circlechart.js" />
+    <None Include="wwwroot\DashBoard\js\jquery.nicescroll.js" />
+    <None Include="wwwroot\DashBoard\js\jquery.vmap.js" />
+    <None Include="wwwroot\DashBoard\js\jquery.vmap.sampledata.js" />
+    <None Include="wwwroot\DashBoard\js\jquery.vmap.world.js" />
+    <None Include="wwwroot\DashBoard\js\metisMenu.min.js" />
+    <None Include="wwwroot\DashBoard\js\modernizr.custom.js" />
+    <None Include="wwwroot\DashBoard\js\moment-2.2.1.js" />
+    <None Include="wwwroot\DashBoard\js\scripts.js" />
+    <None Include="wwwroot\DashBoard\js\site.js" />
+    <None Include="wwwroot\DashBoard\js\skycons.js" />
+    <None Include="wwwroot\DashBoard\js\underscore-min.js" />
+    <None Include="wwwroot\DashBoard\js\validator.min.js" />
+    <None Include="wwwroot\DashBoard\js\wow.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\LoginForm\images\" />
   </ItemGroup>
 
 </Project>
